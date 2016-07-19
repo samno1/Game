@@ -6,6 +6,7 @@ package DotGame;
 import java.util.ArrayList;
 public class DotCom {
     private  ArrayList<String> locationCells;
+    String namePet;
     //private int numOfHits=0;
     void setLocationCells(ArrayList<String> locationCells){
         this.locationCells=locationCells;
@@ -13,7 +14,7 @@ public class DotCom {
     public String CheckYourself(String userInput){
 //        int guess=Integer.parseInt(stringGuess);
 
-         String result = "Мимоооо";
+         String result = "Мимо";
         int index = locationCells.indexOf(userInput);
         if (index>=0){
             locationCells.remove(index);
@@ -24,7 +25,7 @@ public class DotCom {
             }
         }
 //
-//        System.out.println(result);
+          System.out.println(result);
        return result;
 
     }

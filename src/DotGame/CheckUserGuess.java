@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Created by sam on 19.07.16.
  */
-public class GameHelper {
+public class CheckUserGuess {
     public String getUserInput(String prompt){
         String inputLine = null;
         System.out.println(prompt+ " ");
