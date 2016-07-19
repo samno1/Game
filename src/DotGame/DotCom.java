@@ -3,26 +3,33 @@ package DotGame;
 /**
  * Created by sam on 19.07.16.
  */
+import java.util.ArrayList;
 public class DotCom {
-    int[] locationCells;
-    int numOfHits=0;
-    void setLocationCells(int[] locationCells){
+    private  ArrayList<String> locationCells;
+    //private int numOfHits=0;
+    void setLocationCells(ArrayList<String> locationCells){
         this.locationCells=locationCells;
     }
-    public String CheckYourself(String stringGuess){
-        int guess=Integer.parseInt(stringGuess);
-        String result = "Мимоооо";
-        for (int cell : locationCells) {
-            if (guess == cell) {
-                result = "Попал";
-                numOfHits++;
-                break;
+    public String CheckYourself(String userInput){
+//        int guess=Integer.parseInt(stringGuess);
+
+         String result = "Мимоооо";
+        int index = locationCells.indexOf(userInput);
+        if (index>=0){
+            locationCells.remove(index);
+            if (locationCells.isEmpty()){
+                result="Потопил";
+            }else {
+                result="Попал";
             }
         }
-        if (numOfHits == locationCells.length) {
-            result = "Потопил";
-        }
-        System.out.println(result);
-        return result;
+//
+//        System.out.println(result);
+       return result;
+
     }
+    public void setNamePet(String namePet){
+        this.namePet=namePet;
+    }
+
 }
